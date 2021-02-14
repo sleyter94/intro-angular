@@ -5,11 +5,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './listado.component.html',
   styleUrls: ['./listado.component.css']
 })
-export class ListadoComponent implements OnInit {
+export class ListadoComponent{
 
-  constructor() { }
+  heroes: string[] = ['Spiderman','Ironman','Hulk','Thor'];
+  heroeEliminado: string = '';
 
-  ngOnInit(): void {
+  borrarHeroe() {
+    this.heroeEliminado = this.heroes.shift() || '';
   }
 
 }
